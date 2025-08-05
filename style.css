@@ -1,0 +1,233 @@
+/* css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header dengan background gambar */
+header {
+    background: url('../gambar/bg-header.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    color: white;
+    border-bottom: 5px solid #2c3e50;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44, 62, 80, 0.8);
+    z-index: 1;
+}
+
+header .logo {
+    height: 60px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+}
+
+header h1 {
+    font-size: 2em;
+    font-weight: 600;
+    z-index: 2;
+    position: relative;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Navigasi modern */
+nav {
+    background: #2c3e50;
+    padding: 12px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background: #3498db;
+    transform: translateY(-2px);
+}
+
+/* Container utama */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* Form modern */
+.form-container {
+    background: #f9fafa;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-container label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-container button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.form-container button:hover {
+    background: #1a252f;
+    transform: translateY(-2px);
+}
+
+/* Tabel modern */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 15px;
+}
+
+table th {
+    background: #2c3e50;
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+table tr:hover {
+    background: #f1f5f9;
+    cursor: pointer;
+}
+
+/* Tombol aksi */
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary { background: #3498db; color: white; }
+.btn-success { background: #2ecc71; color: white; }
+.btn-warning { background: #f39c12; color: white; }
+.btn-danger { background: #e74c3c; color: white; }
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Kartu statistik */
+.stat-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.stat-card p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background: #2c3e50;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav a { margin: 5px 10px; font-size: 14px; }
+    .container { padding: 15px; }
+    header h1 { font-size: 1.6em; }
+}
